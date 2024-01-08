@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:new_favorite_places/riverpods/user_place.dart';
 import 'package:new_favorite_places/screens/add_places.dart';
+
 import 'package:new_favorite_places/widgets/place_list.dart';
 
 class PlaceScren extends ConsumerWidget {

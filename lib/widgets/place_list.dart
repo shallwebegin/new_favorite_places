@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_favorite_places/models/place.dart';
-import 'package:new_favorite_places/screens/place_details.dart';
 
 class PlaceList extends StatelessWidget {
   const PlaceList({super.key, required this.places});
@@ -11,7 +10,7 @@ class PlaceList extends StatelessWidget {
     if (places.isEmpty) {
       return Center(
         child: Text(
-          'Not found places yet',
+          'No place added yet',
           style: Theme.of(context)
               .textTheme
               .titleMedium!
@@ -23,15 +22,6 @@ class PlaceList extends StatelessWidget {
       itemCount: places.length,
       itemBuilder: (context, index) => ListTile(
         title: Text(places[index].title),
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => PlaceDetailScreen(
-                place: places[index],
-              ),
-            ),
-          );
-        },
       ),
     );
   }
